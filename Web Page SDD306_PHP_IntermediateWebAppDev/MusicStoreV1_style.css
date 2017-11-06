@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<style>
+		
+			ul {
+			    list-style-type: none;
+			    margin: 5;
+			    padding: 0;
+			    overflow: hidden;
+			    background-color: #333;
+			}
+			li {
+			    float: left;
+			}
+			li a {
+			    display: block;
+			    color: white;
+			    text-align: center;
+			    padding: 20px 16px;
+			    text-decoration: none;
+			}
+			li a:hover:not(.active) {
+			    background-color: #490;
+			}
+			.active {
+			    background-color: #4CAF50;
+			}
+	
+			body{
+		    background-image: url("background.jpg");
+		    background-position: center;
+		    background-attachment: fixed;
+				}
+		</style>
+	</head>
+	<body>
+		<ul>
+		  <li><a href="MusicStoreV1.php">HOME</a></li>
+		  <li><a href="MusicStoreV1.php">VIEW MY ARTISTS</a></li>
+		  <li><a href="MusicStoreV1_selection.php">ALBUMS</a></li>
+		  <li><a href="MusicStoreV1_purchases.php">PURCHASE</a></li>
+		  <li><a href="MusicStoreV1_photo.php">PHOTOS</a></li>
+		  <li><a href="MusicStoreV1_login.php">LOGIN</a></li>
+		  <li><a href="MusicStoreV1_contactus.php">CONTACT US</a></li>
+		</ul>
+	</body>
+
+</html>
