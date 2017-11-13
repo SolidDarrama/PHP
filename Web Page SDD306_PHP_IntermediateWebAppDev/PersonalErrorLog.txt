@@ -1,0 +1,6 @@
+*second table:personal - doesnt record with the correct/current member, only with
+the last member that logged in
+
+*bug. register page records blanks into the table:members when the page refreshes after submiting new user
+
+*button layout need re-adjustment, such as register btn "FIXED"
