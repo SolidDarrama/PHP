@@ -36,6 +36,9 @@
         echo "Total Cost: $" . $_SESSION['Total'];
     }
 ?>
+ <form action="shipping.php" method="post">
+    <button class="button">Shipping</button>
+</form>
  <form action="MusicStoreV1_Clearinformation.php" method="post">
     <button class="button">Clear my Cart</button>
 </form>

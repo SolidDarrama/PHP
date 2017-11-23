@@ -24,34 +24,36 @@
     $db_name="test"; // Database name
     $tbl_name="members"; // Table name
     
+    $userName = $_SESSION['myname'];
+    echo "Hi ".$userName.", Enter Your Favorite Album: ";
     // Connect to server and select databse.
     // Connect to server and select databse.
     $link = mysqli_connect('localhost','root','')or die("cannot connect");
     mysqli_select_db($link,$db_name)or die("cannot select DB");
-
-
-   $userName = $_SESSION['myusername'];
-
-   if(isset($_POST['myalbum'])){
-       $favorite = $_POST['myalbum'];
-       $_SESSION['myalbum']=$_POST['myalbum'];
-   }
-   
-    $sql = "INSERT INTO personal (username, favorite)
-    VALUES ('$userName','$favorite')";
-    
-    if ($link->query($sql) === TRUE) {
-        echo "New record created successfully. Please continue to fill out your bio!";
-    } else {
-        echo "Error: " . $sql . "<br>" . $link->error;
+    if(isset($_POST['submitBTN']))
+    {
+       $userName = $_SESSION['myname'];
+        
+       if(isset($_POST['myalbum'])){
+           $favorite = $_POST['myalbum'];
+           $_SESSION['myalbum']=$_POST['myalbum'];
+       }
+       
+        $sql = "INSERT INTO personal (username, favorite)
+        VALUES ('$userName','$favorite')";
+        
+        if ($link->query($sql) === TRUE) {
+            echo "Complete";
+        } else {
+            echo "Error: " . $sql . "<br>" . $link->error;
+        }
+        
+        mysqli_close($link);
+        header("Location: MusicStoreV1_login.php");
     }
-    $link->close();
 ?>
 
 <form action="createpersonal.php" method="post">
   <p>Favorite Album: <input type="text" name="myalbum" id="myalbum"/></p>
- <p><input type="submit" /></p>
-</form>
-<form action="MusicStoreV1_login.php" method="post">
-   <input type="submit" name="next" value="Go to login Page">
+ <input type="submit" name="submitBTN" value="Complete / Return to Login Page">
 </form>

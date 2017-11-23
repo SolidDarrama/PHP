@@ -28,28 +28,32 @@
     // Connect to server and select databse.
     $link = mysqli_connect('localhost','root','')or die("cannot connect");
     mysqli_select_db($link,$db_name)or die("cannot select DB");
-
-   if(isset($_POST['myname'])){
-       $userName = $_POST['myname'];
-   }
-   if(isset($_POST['mypass'])){
-       $passWord = $_POST['mypass'];
-   }
-    
-    $sql = "INSERT INTO members (username, password)
-    VALUES ('$userName','$passWord')";
-    
-    if ($link->query($sql) === TRUE) {
-        echo "";
-    } else {
-        echo "Error: " . $sql . "<br>" . $link->error;
+    //checks when the btn is clicked; helps to prevent blank input into the database table
+    if(isset($_POST['submitBTN']))
+    {
+       if(isset($_POST['myname'])){
+           $userName = $_POST['myname'];
+           $_SESSION['myname'] = $_POST['myname'];
+       }
+       if(isset($_POST['mypass'])){
+           $passWord = $_POST['mypass'];
+       }
+        
+        $sql = "INSERT INTO members (username, password)
+        VALUES ('$userName','$passWord')";
+        
+        if ($link->query($sql) === TRUE) {
+            echo "";
+        } else {
+            echo "Error: " . $sql . "<br>" . $link->error;
+        }
+        mysqli_close($link);
+        header("Location: createpersonal.php");
     }
-    
-    $link->close();
 ?>
 
-<form action="createpersonal.php" method="post">
+<form action="newuserregistration.php" method="post">
  <p>New Username: <input type="text" name="myname" id="myname"/></p>
-  <p>New Password: <input type="text" name="mypass" id="mypass"/></p>
- <p><input type="submit" /></p>
+ <p>New Password: <input type="text" name="mypass" id="mypass"/></p>
+ <input type="submit" name="submitBTN" value="Submit / Next Page">
 </form>
