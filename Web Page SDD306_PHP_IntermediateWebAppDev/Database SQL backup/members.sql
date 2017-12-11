@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2017 at 01:59 AM
+-- Generation Time: Dec 11, 2017 at 05:57 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -39,26 +39,13 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`id`, `username`, `password`) VALUES
+(177, 'red', '23'),
+(176, 'qwe', '123'),
+(175, 'jake', '1212'),
 (1, 'john', '1234'),
-(2, 'jack', '1111'),
-(3, 'sam', '3333'),
-(54, '', ''),
-(52, 'tony', '22'),
-(15, 'will', '555'),
-(48, 'ear', '6'),
-(10, 'kate', '4444'),
-(55, '', ''),
-(12, 'peter', '2121'),
-(57, '', ''),
-(56, '', ''),
-(53, '', ''),
-(22, 'eat', '56'),
-(39, 'red', '44'),
-(50, 'beff', '34'),
-(58, 'we', '23'),
-(59, '', ''),
-(60, '', ''),
-(61, '', '');
+(174, 'bobby', '42e'),
+(173, 'jenny', '43'),
+(172, 'sam', '12w');
 
 --
 -- Indexes for dumped tables
@@ -78,7 +65,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

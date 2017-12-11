@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2017 at 05:56 AM
+-- Generation Time: Dec 11, 2017 at 05:57 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -25,35 +25,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal`
+-- Table structure for table `address`
 --
 
-CREATE TABLE `personal` (
-  `id` int(4) NOT NULL,
-  `username` varchar(65) NOT NULL DEFAULT '',
-  `favorite` varchar(65) NOT NULL DEFAULT ''
+CREATE TABLE `address` (
+  `id` int(5) NOT NULL,
+  `username` varchar(65) NOT NULL,
+  `street` varchar(65) NOT NULL DEFAULT '',
+  `city` varchar(65) NOT NULL DEFAULT '',
+  `state` varchar(65) NOT NULL DEFAULT '',
+  `zip` varchar(65) NOT NULL DEFAULT '',
+  `country` varchar(65) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `personal`
+-- Dumping data for table `address`
 --
 
-INSERT INTO `personal` (`id`, `username`, `favorite`) VALUES
-(65, 'red', 'poke'),
-(64, 'qwe', 'ewq'),
-(63, 'jake', 'hot'),
-(62, 'bobby', 'water'),
-(61, 'jenny', 'earth'),
-(60, 'sam', 'fire');
+INSERT INTO `address` (`id`, `username`, `street`, `city`, `state`, `zip`, `country`) VALUES
+(4, 'qwe', 'basicstreet', 'basiccity', 'basicstate', 'basic12345', 'basicUS'),
+(8, 'red', 'basicstreet', 'basiccity', 'basicstate', 'basic12345', 'basicUS');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `personal`
+-- Indexes for table `address`
 --
-ALTER TABLE `personal`
+ALTER TABLE `address`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -61,10 +61,10 @@ ALTER TABLE `personal`
 --
 
 --
--- AUTO_INCREMENT for table `personal`
+-- AUTO_INCREMENT for table `address`
 --
-ALTER TABLE `personal`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+ALTER TABLE `address`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

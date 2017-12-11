@@ -6,6 +6,11 @@
                 text-align: center;
                 color: #017572;
              }
+              body {
+                position: relative;
+                top: 12px;
+                color: white;
+               }
           </style>
         <title>Wilmu Sound Store</title>
     	<meta charset="utf-8" />

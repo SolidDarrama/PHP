@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2017 at 01:59 AM
+-- Generation Time: Dec 11, 2017 at 05:57 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -25,6 +25,30 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `address`
+--
+
+CREATE TABLE `address` (
+  `id` int(5) NOT NULL,
+  `username` varchar(65) NOT NULL,
+  `street` varchar(65) NOT NULL DEFAULT '',
+  `city` varchar(65) NOT NULL DEFAULT '',
+  `state` varchar(65) NOT NULL DEFAULT '',
+  `zip` varchar(65) NOT NULL DEFAULT '',
+  `country` varchar(65) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `address`
+--
+
+INSERT INTO `address` (`id`, `username`, `street`, `city`, `state`, `zip`, `country`) VALUES
+(4, 'qwe', 'basicstreet', 'basiccity', 'basicstate', 'basic12345', 'basicUS'),
+(8, 'red', 'basicstreet', 'basiccity', 'basicstate', 'basic12345', 'basicUS');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `members`
 --
 
@@ -39,26 +63,13 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`id`, `username`, `password`) VALUES
+(177, 'red', '23'),
+(176, 'qwe', '123'),
+(175, 'jake', '1212'),
 (1, 'john', '1234'),
-(2, 'jack', '1111'),
-(3, 'sam', '3333'),
-(54, '', ''),
-(52, 'tony', '22'),
-(15, 'will', '555'),
-(48, 'ear', '6'),
-(10, 'kate', '4444'),
-(55, '', ''),
-(12, 'peter', '2121'),
-(57, '', ''),
-(56, '', ''),
-(53, '', ''),
-(22, 'eat', '56'),
-(39, 'red', '44'),
-(50, 'beff', '34'),
-(58, 'we', '23'),
-(59, '', ''),
-(60, '', ''),
-(61, '', '');
+(174, 'bobby', '42e'),
+(173, 'jenny', '43'),
+(172, 'sam', '12w');
 
 -- --------------------------------------------------------
 
@@ -77,18 +88,22 @@ CREATE TABLE `personal` (
 --
 
 INSERT INTO `personal` (`id`, `username`, `favorite`) VALUES
-(11, 'beff', ''),
-(10, 'ear', ''),
-(9, 'ear', ''),
-(12, 'beff', 'fog'),
-(13, 'red', ''),
-(14, 'beff', ''),
-(15, 'beff', 'fire'),
-(16, 'we', '');
+(65, 'red', 'poke'),
+(64, 'qwe', 'ewq'),
+(63, 'jake', 'hot'),
+(62, 'bobby', 'water'),
+(61, 'jenny', 'earth'),
+(60, 'sam', 'fire');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `address`
+--
+ALTER TABLE `address`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `members`
@@ -107,16 +122,22 @@ ALTER TABLE `personal`
 --
 
 --
+-- AUTO_INCREMENT for table `address`
+--
+ALTER TABLE `address`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 
 --
 -- AUTO_INCREMENT for table `personal`
 --
 ALTER TABLE `personal`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
