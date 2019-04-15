@@ -12,7 +12,7 @@ error_reporting(E_ALL & ~E_NOTICE); //NOTE: There was a constant 'Notice: Undefi
 #assuming the Notice-Warning falls into that exception.
 
 # First thing you need to do it start the session, this should alwasy be done first.
-# testing
+# testERRORing
 session_start();
 
 # Next, get whatever is currently in the session so you can spit out on the page
