@@ -12,8 +12,7 @@ error_reporting(E_ALL & ~E_NOTICE); //NOTE: There was a constant 'Notice: Undefi
 #assuming the Notice-Warning falls into that exception.
 
 # First thing you need to do it start the session, this should alwasy be done first.
-# testERRORing
-#this that
+# testRound2
 
 # additional test 1
 session_start();
