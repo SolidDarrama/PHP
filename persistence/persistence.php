@@ -1,7 +1,7 @@
 <?php
 #Updated by Jose Guadarrama
 
-# I'm going to silence warnings for you... you will gerate a ton of them.
+# I'm going to silence warnings for you... you will generate a ton of them.
 # If you are having problem with your code, comment this line out so you can see the warnings.
 
 //error_reporting(E_ALL ^ E_WARNING);
