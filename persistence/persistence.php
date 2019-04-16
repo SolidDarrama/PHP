@@ -11,7 +11,7 @@ error_reporting(E_ALL & ~E_NOTICE); //NOTE: There was a constant 'Notice: Undefi
 #I also read on the assignment's instructions, on blackboard that "The application throws no errors (warnings are okay)",
 #assuming the Notice-Warning falls into that exception.
 
-# First thing you need to do it start the session, this should alwasy be done first.
+# First thing you need to do it start the session, this should always be done first.
 session_start();
 
 # Next, get whatever is currently in the session so you can spit out on the page
