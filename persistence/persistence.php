@@ -230,7 +230,7 @@ if (isset($_POST['delete_all'])) //function for the Button - Delete All
                     <td><?php print $_COOKIE['phone'];  ?></td>
                 </tr>
                 <tr>
-                    <td>Email</td>
+                    <td>Email:</td>
                     <td><?php print $_COOKIE['email'];  ?></td>
                 </tr>
             </table>
